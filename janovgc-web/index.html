@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JanoVGC — Jan Altisent Brescó | Competitive Pokémon</title>
+  <meta name="description" content="The competitive Pokémon VGC history of Jan Altisent Brescó (JanoVGC): teams, results, battle bot, coaching and videos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/battle.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="brand">
+        <span class="brand-mark">◓</span>
+        <span class="brand-text">Jano<span>VGC</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#history">History</a></li>
+        <li><a href="#tops">Tops</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#battle">Battle Bot</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#coaching" class="nav-cta">Coaching</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="hero-kicker">Competitive Pokémon · VGC</p>
+      <h1 class="hero-title">Jan Altisent Brescó<span class="hero-alias">“JanoVGC”</span></h1>
+      <p class="hero-lead">
+        A competitive Pokémon VGC journey across the European circuit — Regionals,
+        Internationals and Special Events. Explore the record, the teams, the games,
+        and train with Jano.
+      </p>
+      <div class="hero-actions">
+        <a href="#tops" class="btn btn-primary">See the Tops</a>
+        <a href="#battle" class="btn btn-ghost">Challenge Jano</a>
+        <a href="#coaching" class="btn btn-ghost">Book Coaching</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <!-- Populated from JS so numbers stay in sync -->
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- History / Timeline -->
+    <section class="section" id="history">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">The Journey</p>
+          <h2>Competitive History</h2>
+          <p class="section-sub">A season-by-season timeline of JanoVGC's path through the VGC circuit.</p>
+        </header>
+        <ol class="timeline" id="timeline"><!-- JS populated --></ol>
+      </div>
+    </section>
+
+    <!-- Tops / Achievements -->
+    <section class="section section-alt" id="tops">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Results</p>
+          <h2>Tops &amp; Achievements</h2>
+          <p class="section-sub">Standout placements across Regionals, Internationals and Special Events.</p>
+        </header>
+        <div class="tops-grid" id="tops-grid"><!-- JS populated --></div>
+      </div>
+    </section>
+
+    <!-- Teams -->
+    <section class="section" id="teams">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">The Squads</p>
+          <h2>Teams by Event</h2>
+          <p class="section-sub">Every logged event with its ruleset and win-loss record. Filter by format.</p>
+        </header>
+        <div class="team-filters" id="team-filters"><!-- JS populated --></div>
+        <div class="teams-grid" id="teams-grid"><!-- JS populated --></div>
+        <p class="source-note">Record sourced from <a href="https://vgchistory.com/players/jan-altisent-bresco" target="_blank" rel="noopener">VGC History</a>. Team sheets provided by Jan.</p>
+      </div>
+    </section>
+
+    <!-- Interactive Battle Bot -->
+    <section class="section battle-section" id="battle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Battle Lab</p>
+          <h2>Can You Beat the Jano Bot?</h2>
+          <p class="section-sub">
+            Build a team of six from Jano's competitive roster archive, choose one of his real tournament teams,
+            and play a <strong>Showdown-inspired singles exhibition</strong> against the type-aware Jano Bot.
+          </p>
+        </header>
+        <div id="battle-app" class="battle-app">
+          <noscript>Enable JavaScript to use the Jano Battle Bot.</noscript>
+        </div>
+        <p class="battle-disclaimer">
+          Original fan-made battle experience with simplified mechanics; not affiliated with Pokémon Showdown.
+          Pokémon data and artwork are loaded from <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="section section-alt" id="videos">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Jano Pkm · YouTube</p>
+          <h2>Watch the Games</h2>
+          <p class="section-sub">Real uploads from the Jano Pkm channel — tournament match coverage, Supernova VGC games and VGC guides.</p>
+        </header>
+        <div class="videos-grid" id="videos-grid"><!-- JS populated --></div>
+        <div class="videos-cta">
+          <a class="btn btn-primary" id="channel-link" href="https://www.youtube.com/@JanoVGC" target="_blank" rel="noopener">Visit the Jano Pkm Channel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaching -->
+    <section class="section" id="coaching">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Train With Jano</p>
+          <h2>Coaching Contract</h2>
+          <p class="section-sub">One-on-one VGC coaching — teambuilding, matchup theory and in-game decision making.</p>
+        </header>
+
+        <div class="coaching-layout">
+          <div class="coaching-plans" id="coaching-plans"><!-- JS populated --></div>
+
+          <aside class="coaching-contract">
+            <h3>Coaching Agreement</h3>
+            <p class="contract-intro">The key terms of a coaching engagement with JanoVGC. Fill in the form to request a slot.</p>
+            <ul class="contract-terms">
+              <li><strong>Scope.</strong> VGC teambuilding, replay review, and live practice sessions as selected in the chosen plan.</li>
+              <li><strong>Sessions.</strong> Delivered online via video call. Scheduled by mutual agreement.</li>
+              <li><strong>Duration.</strong> Each session runs 60 minutes unless otherwise agreed.</li>
+              <li><strong>Payment.</strong> Due in advance of each session or block. No refund once a session has started.</li>
+              <li><strong>Cancellation.</strong> 24 hours' notice required to reschedule without charge.</li>
+              <li><strong>Confidentiality.</strong> Teams and strategies shared in sessions stay private unless both parties agree otherwise.</li>
+            </ul>
+            <form class="contract-form" id="contract-form" novalidate>
+              <div class="field">
+                <label for="c-name">Name</label>
+                <input id="c-name" name="name" type="text" required placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="c-plan">Plan</label>
+                <select id="c-plan" name="plan">
+                  <option value="single">Single Session</option>
+                  <option value="block">4-Session Block</option>
+                  <option value="season">Season Partner</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-goal">Your goal</label>
+                <textarea id="c-goal" name="goal" rows="3" placeholder="e.g. prep for my next Regional"></textarea>
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" id="c-agree" required />
+                <span>I have read and agree to the coaching terms above.</span>
+              </label>
+              <button type="submit" class="btn btn-primary btn-block">Request Coaching</button>
+              <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">◓</span>
+        <strong>JanoVGC</strong>
+        <p>Jan Altisent Brescó — Competitive Pokémon VGC.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#history">History</a>
+        <a href="#tops">Tops</a>
+        <a href="#teams">Teams</a>
+        <a href="#battle">Battle Bot</a>
+        <a href="#videos">Videos</a>
+        <a href="#coaching">Coaching</a>
+      </nav>
+      <p class="footer-legal">© <span id="year"></span> JanoVGC. Pokémon is © of The Pokémon Company. Fan site.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/battle.js"></script>
+</body>
+</html>
